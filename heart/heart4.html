@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/886b86fc11.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /**
+      * --------------------
+      * https://forum.freecodecamp.org/t/hard-problem-animation-css3-with-gradient-color-on-click-with-icon/461585
+      * --------------------
+      */
+      .fa-heart {
+        color: red;
+        cursor: pointer;
+      }
+
+      .heart-fill {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(333deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%); 
+      }
+
+      .fa-stack:hover .heart-fill {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="fa-stack fa-2x">
+      <i class="fas fa-heart fa-stack-2x heart-fill"></i>
+      <i class="far fa-heart fa-stack-2x"></i>
+    </span>
+  </body>
+</html>
